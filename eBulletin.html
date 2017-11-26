@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html {
+	font-family: century gothic;
+}
+
+input {
+    width: 100%;
+    padding: 5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+}
+</style>
+</head>
+
+<body>
+
+<form style="width:33%" onsubmit="return post()" action="board.php" method="POST">
+  <fieldset>
+    <legend>Upload:</legend>
+    Title:<br>
+    <input type="text" name="title" value="Dance-o-thon">
+    <br>
+    Organization:<br>
+    <input type="text" name="organization" value="Kinematics">
+    <br>
+	Poster File:<br>
+	<input type="file" name="poster" id="poster" value="browse">
+	<label for="fileupload"></label>
+	<br>
+	Email:<br>
+	<input type="email" name="email" value="janedoe@husky.neu.edu">
+	<br>
+	Date and Time of Event:<br>
+	<input type="datetime" name="date">
+	<br>	
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+</body>
+<script>
+function post(){
+	var postit = document.getElementById("poster").src;
+	document.createElement(postit);
+}
+</script>
+</html>
